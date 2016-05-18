@@ -13,5 +13,8 @@ app.get('/about', function(req, res) {
 	res.send('About us');
 });
 
+// tell express to expose an entire folder (public) in our server
+app.use(express.static(__dirname + '/public'));
+
 // tell app to listen
 app.listen(3000);
